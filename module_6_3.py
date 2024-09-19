@@ -6,6 +6,7 @@ class Horse:
         self.x_distance = dx
 
 
+
 class Eagle:
     y_distance = 0
     sound = 'I train, eat, sleep, and repeat'
@@ -17,8 +18,8 @@ class Eagle:
 class Pegasus(Horse, Eagle):
 
     def move(self, dx, dy):
-        super().run(dx)
-        super().fly(dy)
+        Horse.run(self, dx)
+        Eagle.fly(self, dy)
 
     def get_pos(self):
         return (self.x_distance, self.y_distance)
